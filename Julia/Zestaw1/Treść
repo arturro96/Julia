@@ -1,0 +1,18 @@
+Laboratorium 1 - zadania
+
+1. Zadanie wprowadzające z wykladu (dowolny algorytm z tablicą i pętlą) 5pkt
+2. Napisać funkcję, która bierze typ i wypisuje jego graf dziedziczenia np. w formie "Any-->Number-->Real-->AbstractFloat-->Float16" (3pkt) 
+Wskazówka: wewnetrznie typy są reprezentowane jako DataType np.: 
+julia> typeof(Real) 
+DataType
+3. Napisać prostą symulację świata zwiarząt (12 pkt):
+zwierzę może być typu Drapieżnik lub Ofiara. Oba te typy powinny dziedziczyć po abstrakcyjnym typie Zwierzę
+zwierzęta żyją na kwadratowej planszy NxN, N - dowolnie wybrana (ustalona) liczba. Kazde zwierzę zajmuje jedną kratkę
+Przetestować wsparcie Julii dla Unicode poprzez użycie polskich znaków.
+Napisać parametryczną funkcję dodawania zwierzęcia do swiata wg podanych współrzędnych działającą dla dowolnego typu pochodnego od Zwierzę. Jeśli miejsce jest zajęte rzucany jest wyjątek. Przetestować dodając kilka zwierząt do świata.
+Napisać parametryczną funkcję odległość, ktora oblicza odległość miedzy zwierzętami metryką taksowkową . Funkcja powinna akceptować dowolne typy dziedziczące po typie Zwierzę. Przetesować działanie.
+napisac funkcję interakcja. Zademonstrować i przetestować mechanizm multiple dispatch pisząc następujące metody tej funkcji:
+Jesli pierwszym argumentem jest zmienna typu Drapieżnik, a drugim zmienna typu Ofiara, Ofiara znika ze swiata.
+Jesli pierwszym argumentem jest zmienna typu Ofiara, a druga typu Drapieżnik, Ofiara ucieka w dowolne inne wolne miejsce
+Jesli obydwoma argumentami sa Drapieżnicy metoda zwraca string "Wrrrr".
+Jesli obydwoma argumentami sa Ofiary metoda zwraca string "Beeee".
